@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style.css">
     <title>MathCat</title>
 </head>
 <body>
@@ -13,52 +14,75 @@
   <h1>Bienvenido a MathCat</h1>
     <h2>Donde cada problema tiene una solución lista</h2>
     <p>MathCat es una plataforma educativa diseñada para ayudar a los estudiantes a mejorar sus habilidades matemáticas a través de ejercicios.</p>
-    <p>Explora nuestras secciones y comienza tu viaje de aprendizaje hoy mismo.</p>  
-    
-    <!-- cuadro de suma -->
+    <p>Explora nuestras secciones y comienza tu viaje de aprendizaje hoy mismo.</p>
 
-    <div class="cuadro">
-        <h3>Sumas</h3>
-        <p>Conoce lo necesario de las sumas</p>
-        <img src="imagenes/sumas_signo.png" alt="gatito con pizarron en las manos indicando sumas" width="200"/>
-    </div>
-      <a href="sumas.html">
-        <button>Empezar</button>
-      </a>
+	<div class="contenedor">
 
-<!-- cuadro de resta -->
+		<!-- Sumas -->
+		<div class="segmento">
+			<div class="cuadro">
+				<h3>Sumas</h3>
+				<p>Conoce lo necesario de las sumas</p>
+				<img src="imagenes/sumas_signo.png"
+					 alt="gatito con pizarron en las manos indicando sumas"
+					 width="200"/>
+			</div>
 
-    <div class="cuadro">
-        <h3>Restas</h3>
-        <p>Conoce lo necesario de las restas</p>
-        <img src="imagenes/restas_signo.png" alt="gatito con pizarron en las manos indicando restas" width="200"/>
-    </div>
-      <a href="restas.html">
-        <button>Empezar</button>
-      </a>
-      
-<!-- cuadro de multiplicaciones -->
+			<a href="sumas.html">
+				<button class="boton">Empezar</button>
+			</a>
+		</div>
 
-    <div class="cuadro">
-        <h3>Multiplicaciones</h3>
-        <p>Conoce lo necesario de las multiplicaciones</p>
-        <img src="imagenes/multiplicaciones_signos.png" alt="gatito con pizarron en las manos indicando multiplicaciones" width="200"/>
-    </div>
-      <a href="multiplicaciones.html">
-        <button>Empezar</button>
-      </a>
 
-<!-- cuadro de divisiones -->
+		<!-- Restas -->
+		<div class="segmento">
+			<div class="cuadro">
+				<h3>Restas</h3>
+				<p>Conoce lo necesario de las restas</p>
+				<img src="imagenes/restas_signo.png"
+					 alt="gatito con pizarron en las manos indicando restas"
+					 width="200"/>
+			</div>
 
-      <div class="cuadro">
-        <h3>Divisiones</h3>
-        <p>Conoce lo necesario de las divisiones</p>
-        <img src="imagenes/divisiones_signo.png" alt="gatito con pizarron en las manos indicando divisiones" width="200"/>
-    </div>
-      <a href="divisiones.html">
-        <button>Empezar</button>
-      </a>
+			<a href="restas.html">
+				<button class="boton">Empezar</button>
+			</a>
+		</div>
+
+
+		<!-- Multiplicaciones -->
+		<div class="segmento">
+			<div class="cuadro">
+				<h3>Multiplicaciones</h3>
+				<p>Conoce lo necesario de las multiplicaciones</p>
+				<img src="imagenes/multiplicaciones_signos.png"
+					 alt="gatito con pizarron en las manos indicando multiplicaciones"
+					 width="200"/>
+			</div>
+
+			<a href="multiplicaciones.html">
+				<button class="boton">Empezar</button>
+			</a>
+		</div>
+
+
+		<!-- Divisiones -->
+		<div class="segmento">
+			<div class="cuadro">
+				<h3>Divisiones</h3>
+				<p>Conoce lo necesario de las divisiones</p>
+				<img src="imagenes/divisiones_signo.png"
+					 alt="gatito con pizarron en las manos indicando divisiones"
+					 width="200"/>
+			</div>
+
+			<a href="divisiones.html">
+				<button class="boton">Empezar</button>
+			</a>
+		</div>
+
+	</div>
+	<script src="scrpt.js"></script>
+
 </body>
 </html>
-
-
