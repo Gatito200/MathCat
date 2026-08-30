@@ -1,0 +1,66 @@
+/* Contenedor de los 4 segmentos */
+.contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* Cada segmento */
+.segmento {
+    width: 220px;
+    text-align: center;
+}
+
+/* Cuadro */
+.cuadro {
+    background-color: #f0f0f0;
+    border: 2px solid #333;
+    border-radius: 15px;
+    padding: 15px;
+    height: 350px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+}
+
+/* Títulos */
+.cuadro h3 {
+    font-size: 24px;
+    margin: 5px;
+}
+
+/* Texto */
+.cuadro p {
+    font-size: 16px;
+}
+
+/* Imágenes */
+.cuadro img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Botones */
+.boton {
+    margin-top: 15px;
+    padding: 12px 30px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Efecto al pasar el mouse */
+.boton:hover {
+    background-color: #217dbb;
+    transform: scale(1.05);
+}
