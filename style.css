@@ -173,3 +173,118 @@ footer{
     }
 
 }
+/* PAGINAS DE OPERACIONES */
+
+.contenido-operacion{
+    max-width:900px;
+    margin:auto;
+    padding:30px;
+}
+
+.explicacion{
+    background:white;
+    margin-bottom:20px;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+}
+
+.explicacion h2{
+    color:#4f46e5;
+    margin-bottom:10px;
+}
+
+.explicacion ul{
+    padding-left:20px;
+}
+
+.calculadora{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+    text-align:center;
+}
+
+.calculadora h2{
+    margin-bottom:15px;
+}
+
+.calculadora input{
+    width:100%;
+    max-width:300px;
+    padding:12px;
+    margin:10px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    font-size:16px;
+}
+
+#resultado{
+    margin-top:20px;
+    font-size:22px;
+    font-weight:bold;
+    color:#22c55e;
+}
+
+#procedimiento{
+    margin-top:10px;
+}
+
+.volver{
+    text-align:center;
+    margin-top:25px;
+}
+/* ========================= */
+/* LOGIN Y REGISTRO */
+/* ========================= */
+
+.auth-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:50px 20px;
+}
+
+.auth-card{
+    background:white;
+    width:100%;
+    max-width:450px;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.auth-card h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:#4f46e5;
+}
+
+.auth-card form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.auth-card input{
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    font-size:16px;
+}
+
+.auth-card p{
+    text-align:center;
+    margin-top:15px;
+}
+
+.auth-card a{
+    color:#4f46e5;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.auth-card a:hover{
+    text-decoration:underline;
+}

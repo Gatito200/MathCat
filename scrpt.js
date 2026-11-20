@@ -1,25 +1,158 @@
+// ======== ESTILO DE LA HOME ========
+
 const titulo = document.querySelector("h1");
 
-titulo.style.backgroundColor = "skyblue";
-titulo.style.color = "white";
-titulo.style.padding = "10px";
+if (titulo && window.location.pathname.includes("index")) {
+    titulo.style.color = "white";
+}
 
-const botones = document.querySelectorAll(".boton");
+// ======== FUNCIONES MATEMÁTICAS ========
 
-// Primer botón
-botones[0].style.backgroundColor = "skyblue";
-botones[0].style.color = "white";
+function mostrarResultado(resultado, procedimiento) {
 
-// Segundo botón
-botones[1].style.backgroundColor = "#7BF1A8";
-botones[1].style.color = "white";
+    const resultadoHTML =
+        document.getElementById("resultado");
 
-// Tercer botón
-botones[2].style.backgroundColor = "#DAB2FF";
-botones[2].style.color = "white";
+    const procedimientoHTML =
+        document.getElementById("procedimiento");
 
-// Cuarto botón
-botones[3].style.backgroundColor = "#FFF085";
-botones[3].style.color = "white";
+    resultadoHTML.innerHTML =
+        `<h3>Resultado: ${resultado}</h3>`;
 
-// JavaScript source code
+    procedimientoHTML.innerHTML =
+        `<p><strong>Procedimiento:</strong></p>
+         <p>${procedimiento}</p>`;
+}
+
+// ======== SUMAS ========
+
+function calcularSuma() {
+
+    const numero1 =
+        Number(document.getElementById("numero1").value);
+
+    const numero2 =
+        Number(document.getElementById("numero2").value);
+
+    const resultado = numero1 + numero2;
+
+    mostrarResultado(
+        resultado,
+        `${numero1} + ${numero2} = ${resultado}`
+    );
+}
+
+// ======== RESTAS ========
+
+function calcularResta() {
+
+    const numero1 =
+        Number(document.getElementById("numero1").value);
+
+    const numero2 =
+        Number(document.getElementById("numero2").value);
+
+    const resultado = numero1 - numero2;
+
+    mostrarResultado(
+        resultado,
+        `${numero1} - ${numero2} = ${resultado}`
+    );
+}
+
+// ======== MULTIPLICACIONES ========
+
+function calcularMultiplicacion() {
+
+    const numero1 =
+        Number(document.getElementById("numero1").value);
+
+    const numero2 =
+        Number(document.getElementById("numero2").value);
+
+    const resultado = numero1 * numero2;
+
+    mostrarResultado(
+        resultado,
+        `${numero1} × ${numero2} = ${resultado}`
+    );
+}
+
+// ======== DIVISIONES ========
+
+function calcularDivision() {
+
+    const numero1 =
+        Number(document.getElementById("numero1").value);
+
+    const numero2 =
+        Number(document.getElementById("numero2").value);
+
+    if (numero2 === 0) {
+
+        document.getElementById("resultado").innerHTML =
+            "<h3>No se puede dividir entre cero</h3>";
+
+        document.getElementById("procedimiento").innerHTML = "";
+
+        return;
+    }
+
+    const resultado = numero1 / numero2;
+
+    mostrarResultado(
+        resultado,
+        `${numero1} ÷ ${numero2} = ${resultado}`
+    );
+}
+
+// ===== LOGIN =====
+
+const loginForm =
+    document.getElementById("loginForm");
+
+if(loginForm){
+
+    loginForm.addEventListener("submit", function(event){
+
+        event.preventDefault();
+
+        alert(
+            "Login listo para conectar con el backend."
+        );
+
+    });
+
+}
+
+// ===== REGISTRO =====
+
+const registroForm =
+    document.getElementById("registroForm");
+
+if(registroForm){
+
+    registroForm.addEventListener("submit", function(event){
+
+        event.preventDefault();
+
+        const password =
+            document.getElementById("passwordRegistro").value;
+
+        const confirmar =
+            document.getElementById("confirmarPassword").value;
+
+        if(password !== confirmar){
+
+            alert("Las contraseñas no coinciden");
+
+            return;
+        }
+
+        alert(
+            "Registro listo para conectar con MongoDB."
+        );
+
+    });
+
+}
