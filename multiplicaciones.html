@@ -1,13 +1,94 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MathCat-multiplicaciones</title>
+    <title>MathCat - Multiplicaciones</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <img src="imagenes/multiplicaciones_completo.png" alt="Logo de MathCat con el titulo de Multiplicaciones" width="150"/>
-  <h1 id="multiplicaciones">Multiplicaciones</h1>
-        <p>La multiplicación es una operación matemática que consiste en combinar dos o más cantidades para obtener un resultado llamado **producto**. Se representa con el signo **×** o **·** y permite calcular cuánto hay en conjunto cuando se repite una cantidad varias veces.</p>
+
+<header>
+    <img src="imagenes/multiplicaciones_completo.png"
+         alt="Multiplicaciones"
+         class="logo">
+
+    <div class="titulo-principal">
+        <h1>Multiplicaciones</h1>
+        <p>Aprende a multiplicar paso a paso</p>
+    </div>
+</header>
+
+<main class="contenido-operacion">
+
+    <section class="explicacion">
+
+        <h2>¿Qué es una multiplicación?</h2>
+
+        <p>
+            La multiplicación es una operación matemática que permite sumar una cantidad varias veces.
+        </p>
+
+        <p>
+            Se representa mediante los símbolos <strong>×</strong> o <strong>*</strong>.
+        </p>
+
+    </section>
+
+    <section class="explicacion">
+
+        <h2>Reglas básicas</h2>
+
+        <ul>
+            <li>Cualquier número multiplicado por 1 conserva su valor.</li>
+            <li>Cualquier número multiplicado por 0 es 0.</li>
+            <li>El orden de los factores no altera el producto.</li>
+            <li>La multiplicación es una suma repetida.</li>
+        </ul>
+
+    </section>
+
+    <section class="explicacion">
+
+        <h2>Ejemplo resuelto</h2>
+
+        <p><strong>Ejercicio:</strong> 7 × 5</p>
+
+        <p>7 + 7 + 7 + 7 + 7 = 35</p>
+
+        <p><strong>Resultado final: 35</strong></p>
+
+    </section>
+
+    <section class="calculadora">
+
+        <h2>Practica tus propias multiplicaciones</h2>
+
+        <input type="number" id="numero1" placeholder="Primer número">
+
+        <input type="number" id="numero2" placeholder="Segundo número">
+
+        <button onclick="calcularMultiplicacion()" class="boton multiplicacion">
+            Calcular
+        </button>
+
+        <div id="resultado"></div>
+
+        <div id="procedimiento"></div>
+
+    </section>
+
+    <div class="volver">
+        <a href="index.html">
+            <button class="boton">Volver al inicio</button>
+        </a>
+    </div>
+
+</main>
+
+    <script src="scrpt.js"></script>
+
 </body>
 </html>

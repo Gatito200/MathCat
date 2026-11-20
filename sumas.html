@@ -1,17 +1,110 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MathCat-sumas</title>
+    <title>MathCat - Sumas</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <img src="imagenes/sumas_completo.png" alt="Logo de MathCat con el titulo de Sumas" width="150"/>
-  <h1 id="sumas">Sumas</h1>
-    <p> 
-        La suma es una operación matemática que consiste en combinar dos o más cantidades para obtener 
-        un resultado llamado total. Se representa con el signo + y permite calcular cuánto hay en 
-        conjunto.
-    </p>
+
+    <header>
+        <img src="imagenes/sumas_completo.png"
+             alt="Logo de Sumas"
+             class="logo">
+
+        <div class="titulo-principal">
+            <h1>Sumas</h1>
+            <p>Aprende a sumar paso a paso</p>
+        </div>
+    </header>
+
+    <main class="contenido-operacion">
+
+        <section class="explicacion">
+
+            <h2>¿Qué es una suma?</h2>
+
+            <p>
+                La suma es una operación matemática que consiste en combinar dos o más
+                cantidades para obtener un resultado llamado total.
+            </p>
+
+            <p>
+                Se representa mediante el signo <strong>+</strong> y es una de las
+                operaciones fundamentales de las matemáticas.
+            </p>
+
+        </section>
+
+        <section class="explicacion">
+
+            <h2>Reglas básicas de la suma</h2>
+
+            <ul>
+                <li>El orden de los números no altera el resultado.</li>
+                <li>La suma de números positivos siempre aumenta la cantidad.</li>
+                <li>Sumar cero no cambia el número.</li>
+                <li>Se pueden sumar dos o más números.</li>
+            </ul>
+
+        </section>
+
+        <section class="explicacion">
+
+            <h2>Ejemplo resuelto</h2>
+
+            <p><strong>Ejercicio:</strong> 15 + 8</p>
+
+            <p>
+                Paso 1: Identificar los números.
+            </p>
+
+            <p>
+                Paso 2: Realizar la suma.
+            </p>
+
+            <p>
+                15 + 8 = 23
+            </p>
+
+            <p>
+                Resultado final: <strong>23</strong>
+            </p>
+
+        </section>
+
+        <section class="calculadora">
+
+            <h2>Practica tus propias sumas</h2>
+
+            <input type="number" id="numero1" placeholder="Primer número">
+
+            <input type="number" id="numero2" placeholder="Segundo número">
+
+            <button onclick="calcularSuma()" class="boton suma">
+                Calcular
+            </button>
+
+            <div id="resultado"></div>
+
+            <div id="procedimiento"></div>
+
+        </section>
+
+        <div class="volver">
+            <a href="index.html">
+                <button class="boton">
+                    Volver al inicio
+                </button>
+            </a>
+        </div>
+
+    </main>
+
+        <script src="scrpt.js"></script>
+
 </body>
 </html>

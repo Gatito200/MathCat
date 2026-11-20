@@ -1,13 +1,94 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MathCat-divisiones</title>
+    <title>MathCat - Divisiones</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <img src="imagenes/divisiones_completo.png" alt="Logo de MathCat con el titulo de Divisiones" width="150"/>
-  <h1 id="divisiones">Divisiones</h1>
+
+<header>
+    <img src="imagenes/divisiones_completo.png"
+         alt="Divisiones"
+         class="logo">
+
+    <div class="titulo-principal">
+        <h1>Divisiones</h1>
+        <p>Aprende a dividir paso a paso</p>
+    </div>
+</header>
+
+<main class="contenido-operacion">
+
+    <section class="explicacion">
+
+        <h2>¿Qué es una división?</h2>
+
+        <p>
+            La división es una operación matemática que consiste en repartir una cantidad en partes iguales.
+        </p>
+
+        <p>
+            Se representa mediante el símbolo <strong>÷</strong> o <strong>/</strong>.
+        </p>
+
+    </section>
+
+    <section class="explicacion">
+
+        <h2>Reglas básicas</h2>
+
+        <ul>
+            <li>Todo número dividido para 1 conserva su valor.</li>
+            <li>Un número dividido para sí mismo da 1.</li>
+            <li>No se puede dividir entre cero.</li>
+            <li>La división es la operación inversa de la multiplicación.</li>
+        </ul>
+
+    </section>
+
+    <section class="explicacion">
+
+        <h2>Ejemplo resuelto</h2>
+
+        <p><strong>Ejercicio:</strong> 20 ÷ 5</p>
+
+        <p>20 dividido entre 5 es igual a 4.</p>
+
+        <p><strong>Resultado final: 4</strong></p>
+
+    </section>
+
+    <section class="calculadora">
+
+        <h2>Practica tus propias divisiones</h2>
+
+        <input type="number" id="numero1" placeholder="Dividendo">
+
+        <input type="number" id="numero2" placeholder="Divisor">
+
+        <button onclick="calcularDivision()" class="boton division">
+            Calcular
+        </button>
+
+        <div id="resultado"></div>
+
+        <div id="procedimiento"></div>
+
+    </section>
+
+    <div class="volver">
+        <a href="index.html">
+            <button class="boton">Volver al inicio</button>
+        </a>
+    </div>
+
+</main>
+
+    <script src="scrpt.js"></script>
 
 </body>
 </html>
