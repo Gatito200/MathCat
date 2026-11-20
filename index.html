@@ -1,88 +1,134 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="style.css">
     <title>MathCat</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
- 
-  <!-- parte superior de la pagina -->
 
-  <img src="imagenes/logo mathcat (1).png" alt="Logo de MathCat" width="150"/>
-  <h1>Bienvenido a MathCat</h1>
-    <h2>Donde cada problema tiene una solución lista</h2>
-    <p>MathCat es una plataforma educativa diseñada para ayudar a los estudiantes a mejorar sus habilidades matemáticas a través de ejercicios.</p>
-    <p>Explora nuestras secciones y comienza tu viaje de aprendizaje hoy mismo.</p>
+    <header>
+        <img src="imagenes/logo mathcat (1).png" alt="Logo de MathCat" class="logo">
 
-	<div class="contenedor">
+        <div class="titulo-principal">
+            <h1>MathCat</h1>
+            <p>Donde cada problema tiene una solución lista</p>
+        </div>
+    </header>
 
-		<!-- Sumas -->
-		<div class="segmento">
-			<div class="cuadro">
-				<h3>Sumas</h3>
-				<p>Conoce lo necesario de las sumas</p>
-				<img src="imagenes/sumas_signo.png"
-					 alt="gatito con pizarron en las manos indicando sumas"
-					 width="200"/>
-			</div>
+    <section class="hero">
+        <h2>Aprende Matemáticas de Forma Fácil y Divertida</h2>
 
-			<a href="sumas.html">
-				<button class="boton">Empezar</button>
-			</a>
-		</div>
+        <p>
+            MathCat es una plataforma educativa diseñada para ayudarte a comprender,
+            practicar y dominar las operaciones matemáticas básicas mediante ejemplos,
+            explicaciones y ejercicios interactivos.
+        </p>
+    </section>
 
+    <main>
 
-		<!-- Restas -->
-		<div class="segmento">
-			<div class="cuadro">
-				<h3>Restas</h3>
-				<p>Conoce lo necesario de las restas</p>
-				<img src="imagenes/restas_signo.png"
-					 alt="gatito con pizarron en las manos indicando restas"
-					 width="200"/>
-			</div>
+        <h2 class="seccion-titulo">Operaciones Matemáticas</h2>
 
-			<a href="restas.html">
-				<button class="boton">Empezar</button>
-			</a>
-		</div>
+        <div class="contenedor">
 
+            <!-- Sumas -->
+            <div class="segmento">
+                <div class="cuadro">
+                    <h3>Sumas</h3>
 
-		<!-- Multiplicaciones -->
-		<div class="segmento">
-			<div class="cuadro">
-				<h3>Multiplicaciones</h3>
-				<p>Conoce lo necesario de las multiplicaciones</p>
-				<img src="imagenes/multiplicaciones_signos.png"
-					 alt="gatito con pizarron en las manos indicando multiplicaciones"
-					 width="200"/>
-			</div>
+                    <p>
+                        Aprende a combinar cantidades y resolver operaciones básicas de suma.
+                    </p>
 
-			<a href="multiplicaciones.html">
-				<button class="boton">Empezar</button>
-			</a>
-		</div>
+                    <img src="imagenes/sumas_signo.png"
+                        alt="Gatito indicando sumas">
+                </div>
 
+                <a href="sumas.html">
+                    <button class="boton suma">Empezar</button>
+                </a>
+            </div>
 
-		<!-- Divisiones -->
-		<div class="segmento">
-			<div class="cuadro">
-				<h3>Divisiones</h3>
-				<p>Conoce lo necesario de las divisiones</p>
-				<img src="imagenes/divisiones_signo.png"
-					 alt="gatito con pizarron en las manos indicando divisiones"
-					 width="200"/>
-			</div>
+            <!-- Restas -->
+            <div class="segmento">
+                <div class="cuadro">
 
-			<a href="divisiones.html">
-				<button class="boton">Empezar</button>
-			</a>
-		</div>
+                    <h3>Restas</h3>
 
-	</div>
-	<script src="scrpt.js"></script>
+                    <p>
+                        Aprende cómo encontrar diferencias entre cantidades.
+                    </p>
+
+                    <img src="imagenes/restas_signo.png"
+                        alt="Gatito indicando restas">
+                </div>
+
+                <a href="restas.html">
+                    <button class="boton resta">Empezar</button>
+                </a>
+
+            </div>
+
+            <!-- Multiplicaciones -->
+
+            <div class="segmento">
+
+                <div class="cuadro">
+
+                    <h3>Multiplicaciones</h3>
+
+                    <p>
+                        Descubre cómo realizar multiplicaciones de forma sencilla.
+                    </p>
+
+                    <img src="imagenes/multiplicaciones_signos.png"
+                        alt="Gatito indicando multiplicaciones">
+
+                </div>
+
+                <a href="multiplicaciones.html">
+                    <button class="boton multiplicacion">Empezar</button>
+                </a>
+
+            </div>
+
+            <!-- Divisiones -->
+
+            <div class="segmento">
+
+                <div class="cuadro">
+
+                    <h3>Divisiones</h3>
+
+                    <p>
+                        Aprende a repartir cantidades y resolver divisiones paso a paso.
+                    </p>
+
+                    <img src="imagenes/divisiones_signo.png"
+                        alt="Gatito indicando divisiones">
+
+                </div>
+
+                <a href="divisiones.html">
+                    <button class="boton division">Empezar</button>
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>MathCat © 2026 | Proyecto Educativo de Matemáticas</p>
+    </footer>
+
+    <script src="scrpt.js"></script>
 
 </body>
+
 </html>
