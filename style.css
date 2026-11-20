@@ -11,6 +11,65 @@ body{
 }
 
 /* HEADER */
+/* ========================= */
+/* LOGIN Y REGISTRO NAVBAR */
+/* ========================= */
+
+.top-bar{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+
+}
+
+.auth-links{
+
+    display:flex;
+    gap:10px;
+
+}
+
+.btn-auth{
+
+    text-decoration:none;
+    background:white;
+    color:#4f46e5;
+
+    padding:10px 15px;
+
+    font-weight:bold;
+
+    border-radius:10px;
+
+    transition:.3s;
+
+}
+
+.btn-auth:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.registro{
+
+    background:#22c55e;
+    color:white;
+
+}
+
+@media(max-width:768px){
+
+    .top-bar{
+
+        flex-direction:column;
+        gap:15px;
+
+    }
+
+}
 
 header{
     background:#4f46e5;
@@ -287,4 +346,129 @@ footer{
 
 .auth-card a:hover{
     text-decoration:underline;
+}
+/* ================================= */
+/* RESPONSIVE TABLET */
+/* ================================= */
+
+@media screen and (max-width: 992px) {
+
+    .contenedor {
+        gap: 20px;
+    }
+
+    .segmento {
+        width: 300px;
+    }
+
+    .titulo-principal h1 {
+        font-size: 2.5rem;
+    }
+
+}
+
+/* ================================= */
+/* RESPONSIVE MOVIL */
+/* ================================= */
+
+@media screen and (max-width: 768px) {
+
+    header {
+        padding: 15px;
+    }
+
+    .top-bar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .auth-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    .titulo-principal h1 {
+        font-size: 2rem;
+    }
+
+    .titulo-principal p {
+        font-size: 1rem;
+    }
+
+    .hero {
+        padding: 20px 15px;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .contenedor {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .segmento {
+        width: 95%;
+        max-width: 350px;
+    }
+
+    .cuadro {
+        height: auto;
+        min-height: 350px;
+    }
+
+    .contenido-operacion {
+        padding: 15px;
+    }
+
+    .explicacion,
+    .calculadora {
+        padding: 15px;
+    }
+
+    .calculadora input {
+        width: 100%;
+        margin: 8px 0;
+    }
+
+    .auth-card {
+        width: 95%;
+        padding: 20px;
+    }
+
+}
+
+/* ================================= */
+/* MOVILES PEQUEÑOS */
+/* ================================= */
+
+@media screen and (max-width: 480px) {
+
+    .titulo-principal h1 {
+        font-size: 1.7rem;
+    }
+
+    .hero h2 {
+        font-size: 1.3rem;
+    }
+
+    .cuadro h3 {
+        font-size: 1.3rem;
+    }
+
+    .boton {
+        width: 100%;
+    }
+
+    footer {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
 }
