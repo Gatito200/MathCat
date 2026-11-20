@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathCat - Registro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <img src="imagenes/logo mathcat (1).png"
+         alt="MathCat"
+         class="logo">
+
+    <div class="titulo-principal">
+        <h1>Registro</h1>
+        <p>Crea tu cuenta en MathCat</p>
+    </div>
+
+</header>
+
+<main class="auth-container">
+
+    <div class="auth-card">
+
+        <h2>Crear Cuenta</h2>
+
+        <form id="registroForm">
+
+            <input
+                type="text"
+                id="nombre"
+                placeholder="Nombre completo"
+                required>
+
+            <input
+                type="email"
+                id="emailRegistro"
+                placeholder="Correo electrónico"
+                required>
+
+            <input
+                type="password"
+                id="passwordRegistro"
+                placeholder="Contraseña"
+                required>
+
+            <input
+                type="password"
+                id="confirmarPassword"
+                placeholder="Confirmar contraseña"
+                required>
+
+            <button type="submit" class="boton multiplicacion">
+                Registrarse
+            </button>
+
+        </form>
+
+        <p>
+            ¿Ya tienes una cuenta?
+            <a href="login.html">Inicia sesión aquí</a>
+        </p>
+
+    </div>
+
+</main>
+
+<script src="scrpt.js"></script>
+
+</body>
+</html>
