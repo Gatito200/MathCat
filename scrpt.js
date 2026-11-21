@@ -285,37 +285,45 @@ if (registroForm) {
 
 // ===== CONTACTO =====
 
+// ===== CONTACTO =====
+
 const contactForm =
-    document.getElementById(
-        "contactForm"
-    );
+    document.getElementById("contactForm");
 
-
-if(contactForm){
+if (contactForm) {
 
     contactForm.addEventListener(
         "submit",
-        async function(event){
+        async function (event) {
 
             event.preventDefault();
 
             const mensaje =
                 document.getElementById(
                     "mensajeContacto"
-                ).value;
+                ).value.trim();
 
-            try{
+            if (!mensaje) {
+
+                alert(
+                    "Escribe un mensaje"
+                );
+
+                return;
+            }
+
+            try {
 
                 const respuesta =
                     await fetch(
                         "/api/contact",
                         {
-                            method:"POST",
-                            headers:{
+                            method: "POST",
+                            headers: {
                                 "Content-Type":
-                                "application/json"
+                                    "application/json"
                             },
-                            body:JSON.stringify({
+                            body: JSON.stringify({
                                 mensaje
                             })
                         }
@@ -324,15 +332,19 @@ if(contactForm){
                 const datos =
                     await respuesta.json();
 
-                alert(datos.mensaje);
+                alert(
+                    datos.mensaje
+                );
 
-                if(respuesta.ok){
+                if (respuesta.ok) {
 
                     contactForm.reset();
 
                 }
 
-            }catch(error){
+            } catch (error) {
+
+                console.error(error);
 
                 alert(
                     "Error al enviar mensaje"
