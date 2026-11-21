@@ -1,3 +1,5 @@
+const contactRoutes =
+    require("./routes/contactRoutes");
 const authRoutes = require("./routes/authRoutes");
 require("dotenv").config();
 
@@ -40,6 +42,11 @@ app.get("/api/test", (req, res) => {
 
 // Iniciar servidor
 app.use("/api/auth", authRoutes);
+
+app.use(
+    "/api/contact",
+    contactRoutes
+);
 
 app.listen(PORT, () => {
 
