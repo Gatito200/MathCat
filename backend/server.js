@@ -1,8 +1,15 @@
+const authRoutes = require("./routes/authRoutes");
+require("dotenv").config();
+
 const express = require("express");
 const path = require("path");
 const cors = require("cors");
 
+const conectarDB = require("./config/db");
+
 const app = express();
+
+conectarDB();
 
 const PORT = 3000;
 
@@ -32,6 +39,8 @@ app.get("/api/test", (req, res) => {
 });
 
 // Iniciar servidor
+app.use("/api/auth", authRoutes);
+
 app.listen(PORT, () => {
 
     console.log(

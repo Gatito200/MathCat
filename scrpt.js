@@ -1,3 +1,28 @@
+// ======== RUTAS PROTEGIDAS ========
+const rutasProtegidas = [
+    "/index.html",
+    "/sumas.html",
+    "/restas.html",
+    "/multiplicaciones.html",
+    "/divisiones.html"
+];
+
+const token = localStorage.getItem("token");
+// ======== ESTILO DE LA HOME ========
+const paginaActual = window.location.pathname;
+
+if (
+    rutasProtegidas.some(ruta =>
+        paginaActual.includes(ruta)
+    )
+) {
+
+    if (!token) {
+
+        window.location.href =
+            "login.html";
+    }
+}
 // ======== ESTILO DE LA HOME ========
 
 const titulo = document.querySelector("h1");
@@ -111,18 +136,67 @@ function calcularDivision() {
 const loginForm =
     document.getElementById("loginForm");
 
-if(loginForm){
+if (loginForm) {
 
-    loginForm.addEventListener("submit", function(event){
+    loginForm.addEventListener(
+        "submit",
+        async function (event) {
 
-        event.preventDefault();
+            event.preventDefault();
 
-        alert(
-            "Login listo para conectar con el backend."
-        );
+            const email =
+                document.getElementById("emailLogin").value;
 
-    });
+            const password =
+                document.getElementById("passwordLogin").value;
 
+            try {
+
+                const respuesta =
+                    await fetch(
+                        "http://localhost:3000/api/auth/login",
+                        {
+                            method: "POST",
+                            headers: {
+                                "Content-Type":
+                                    "application/json"
+                            },
+                            body: JSON.stringify({
+                                email,
+                                password
+                            })
+                        }
+                    );
+
+                const datos =
+                    await respuesta.json();
+
+                if (!respuesta.ok) {
+
+                    alert(datos.mensaje);
+                    return;
+                }
+
+                localStorage.setItem(
+                    "token",
+                    datos.token
+                );
+
+                alert("Login exitoso");
+
+                window.location.href =
+                    "index.html";
+
+            } catch (error) {
+
+                console.error(error);
+
+                alert(
+                    "Error al conectar con el servidor"
+                );
+            }
+        }
+    );
 }
 
 // ===== REGISTRO =====
@@ -130,29 +204,81 @@ if(loginForm){
 const registroForm =
     document.getElementById("registroForm");
 
-if(registroForm){
+if (registroForm) {
 
-    registroForm.addEventListener("submit", function(event){
+    registroForm.addEventListener(
+        "submit",
+        async function (event) {
 
-        event.preventDefault();
+            event.preventDefault();
 
-        const password =
-            document.getElementById("passwordRegistro").value;
+            const nombre =
+                document.getElementById("nombre").value;
 
-        const confirmar =
-            document.getElementById("confirmarPassword").value;
+            const email =
+                document.getElementById("emailRegistro").value;
 
-        if(password !== confirmar){
+            const password =
+                document.getElementById("passwordRegistro").value;
 
-            alert("Las contraseñas no coinciden");
+            const confirmar =
+                document.getElementById("confirmarPassword").value;
 
-            return;
+            if (password !== confirmar) {
+
+                alert("Las contraseñas no coinciden");
+                return;
+            }
+
+            try {
+
+                const respuesta =
+                    await fetch(
+                        "http://localhost:3000/api/auth/register",
+                        {
+                            method: "POST",
+                            headers: {
+                                "Content-Type":
+                                    "application/json"
+                            },
+                            body: JSON.stringify({
+                                nombre,
+                                email,
+                                password
+                            })
+                        }
+                    );
+
+                const datos =
+                    await respuesta.json();
+
+                alert(datos.mensaje);
+
+                if (respuesta.ok) {
+
+                    window.location.href =
+                        "login.html";
+                }
+
+            } catch (error) {
+
+                console.error(error);
+
+                alert(
+                    "Error al conectar con el servidor"
+                );
+            }
         }
+    );
+}
 
-        alert(
-            "Registro listo para conectar con MongoDB."
-        );
+// ===== CERRAR SESIÓN  =====
 
-    });
+ function cerrarSesion() {
 
+    localStorage.removeItem("token");
+
+    alert("Sesión cerrada correctamente");
+
+    window.location.href = "login.html";
 }
