@@ -1,44 +1,41 @@
-const Contact =
-    require("../models/Contact");
+const Contact = require("../models/Contact");
 
-const enviarMensaje =
-    async (req, res) => {
+const enviarMensaje = async (req, res) => {
 
     try {
 
+        console.log("Mensaje recibido:", req.body);
+
         const { mensaje } = req.body;
 
-        if (!mensaje || mensaje.trim() === "") {
+        if (!mensaje) {
 
             return res.status(400).json({
-                mensaje:
-                    "Debes escribir un mensaje"
+                mensaje: "Debes escribir un mensaje"
             });
 
         }
 
-        const nuevoMensaje =
-            new Contact({
-                mensaje
-            });
+        const nuevoMensaje = new Contact({
+            mensaje
+        });
 
         await nuevoMensaje.save();
 
-        res.status(201).json({
-            mensaje:
-                "Mensaje enviado correctamente"
+        return res.status(201).json({
+            mensaje: "Mensaje enviado correctamente"
         });
 
     } catch (error) {
 
-        console.error(error);
+        console.error("ERROR CONTACT:", error);
 
-        res.status(500).json({
-            mensaje:
-                "Error del servidor"
+        return res.status(500).json({
+            mensaje: "Error del servidor"
         });
 
     }
+
 };
 
 module.exports = {

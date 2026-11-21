@@ -282,3 +282,65 @@ if (registroForm) {
 
     window.location.href = "login.html";
 }
+
+// ===== CONTACTO =====
+
+const contactForm =
+    document.getElementById(
+        "contactForm"
+    );
+
+
+if(contactForm){
+
+    contactForm.addEventListener(
+        "submit",
+        async function(event){
+
+            event.preventDefault();
+
+            const mensaje =
+                document.getElementById(
+                    "mensajeContacto"
+                ).value;
+
+            try{
+
+                const respuesta =
+                    await fetch(
+                        "/api/contact",
+                        {
+                            method:"POST",
+                            headers:{
+                                "Content-Type":
+                                "application/json"
+                            },
+                            body:JSON.stringify({
+                                mensaje
+                            })
+                        }
+                    );
+
+                const datos =
+                    await respuesta.json();
+
+                alert(datos.mensaje);
+
+                if(respuesta.ok){
+
+                    contactForm.reset();
+
+                }
+
+            }catch(error){
+
+                alert(
+                    "Error al enviar mensaje"
+                );
+
+            }
+
+        }
+    );
+
+}
